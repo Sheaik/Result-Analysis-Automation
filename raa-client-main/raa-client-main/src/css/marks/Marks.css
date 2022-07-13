@@ -1,0 +1,21 @@
+.Marks {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "navbar" "container ";
+}
+
+.Marks .NavBar {
+    grid-area: navbar;
+}
+
+.Marks .container{
+    grid-area: container;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.home {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "navbar" "container ";
+}
+
+.home .NavBar {
+    grid-area: navbar;
+}
+
+.home .container{
+    grid-area: container;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 100%;
+    grid-template-areas: "home-image home-note";
+    overflow: hidden;
+}
+
+.home .container .home-image{
+    grid-area: home-image;
+    height: 100%;
+    width: 100%;
+    background: lightblue;
+    overflow: hidden;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.home .container .home-image img{
+    height: 100%;
+    width: auto;
+    position: relative;
+    right: 30px;
+}
+
+.home .container .home-note{
+    grid-area: home-note;
+    padding: 0px 60px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+
+.home .container .home-note .title{
+    font-size: 4em;
+    font-weight: 500;
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.home .container .home-note .notes {
+    font-size: 1.1em;
+    font-weight: 500;
+    height: 75%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}

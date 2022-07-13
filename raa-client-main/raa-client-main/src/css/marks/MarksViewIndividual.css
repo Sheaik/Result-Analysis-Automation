@@ -1,0 +1,220 @@
+.MarksViewIndividual {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px 100px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "header" "result";
+}
+
+.MarksViewIndividual .title {
+    grid-area: title;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2em;
+}
+
+.MarksViewIndividual .header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.MarksViewIndividual .header .input-section {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MarksViewIndividual .header .input-section input {
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    border: 2px solid #1B1E21;
+    color: #1B1E21;
+    outline: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.MarksViewIndividual .header .input-section input::placeholder {
+    color: #1B1E21;
+}
+
+.MarksViewIndividual .header .input-section button {
+    height: 50px;
+    width: 100px;
+    font-size: 1.2em;
+    margin-left: 30px;
+    background: #1B1E21;
+    color: #C1C1C1;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.MarksViewIndividual .header .input-section button:active {
+    transform: scale(0.9);
+}
+
+.MarksViewIndividual .header .sub-script {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    color: #1B1E21;
+}
+
+.MarksViewIndividual .header .sub-script a {
+    margin: 10px;
+    color: #1B1E21;
+    transition: all 0.3s ease;
+}
+
+.MarksViewIndividual .header .sub-script a:hover {
+    transform: scale(1.1);
+}
+
+.MarksViewIndividual .result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MarksViewIndividual .result.loaded {
+    grid-area: result;
+    display: grid;
+    grid-template-rows: 80px 400px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.MarksViewIndividual .result.loaded .student-details {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 1px solid rgba(27, 30, 33, 0.5);
+    border-bottom: 1px solid rgba(27, 30, 33, 0.5);
+    grid-template-areas: "student-name student-regno print-data" "student-dept student-batch print-data";
+}
+
+.MarksViewIndividual .result.loaded .student-details .student-name {
+    grid-area: student-name;
+}
+
+.MarksViewIndividual .result.loaded .student-details .student-regno {
+    grid-area: student-regno;
+}
+
+.MarksViewIndividual .result.loaded .student-details .student-dept {
+    grid-area: student-dept;
+}
+
+.MarksViewIndividual .result.loaded .student-details .student-batch {
+    grid-area: student-batch;
+}
+
+.MarksViewIndividual .result.loaded .student-details .print-data {
+    grid-area: print-data;
+}
+
+.MarksViewIndividual .result.loaded .student-details .print-data {
+    grid-area: print-data;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.MarksViewIndividual .result.loaded .student-details .print-data button {
+    height: 30px;
+    width: 120px;
+    background: #1B1E21;
+    border-radius: 5px;
+    color: #C1C1C1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.MarksViewIndividual .result.loaded .student-details .print-data button:active {
+    transform: scale(0.9);
+}
+
+.MarksViewIndividual .result.loaded .student-details .student-name,
+.MarksViewIndividual .result.loaded .student-details .student-regno,
+.MarksViewIndividual .result.loaded .student-details .student-dept,
+.MarksViewIndividual .result.loaded .student-details .student-batch,
+.MarksViewIndividual .result.loaded .student-details .print-data {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.2em
+}
+
+.MarksViewIndividual .result.loaded .LineGraph {
+    padding-left: 5%;
+}
+
+.MarksViewIndividual .result.loaded .sem-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    border-bottom: 1px solid rgba(27, 30, 33, 0.5);
+}
+
+.MarksViewIndividual .result.loaded .sem-data.sem-1 {
+    border-top: 1px solid rgba(27, 30, 33, 0.5);
+}
+
+.MarksViewIndividual .result.loaded .sem-data .sem-num {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+}
+
+.MarksViewIndividual .result.loaded .sem-data .table-data {
+    height: 150px;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.MarksViewIndividual .result.loaded .sem-data .table-data table {
+    width: 100%;
+}
+
+.MarksViewIndividual .result.loaded .sem-data .table-data table tr {
+    height: 25px;
+}
+
+.MarksViewIndividual .result.loaded .sem-data .table-data table thead tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.MarksViewIndividual .result.loaded .sem-data .table-data table thead tr:hover,
+.MarksViewIndividual .result.loaded .sem-data .table-data table tr:hover {
+    background-color: #ddd;
+}
+
+.MarksViewIndividual .result.loaded .sem-data .table-data table tr td.fail {
+    font-weight: 700;
+    color: red;
+}

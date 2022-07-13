@@ -1,0 +1,343 @@
+.NavBar {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2F2F2F;
+    z-index: 9999;
+}
+
+.NavBar .logo {
+    width: 40%;
+    justify-content: center;
+}
+
+.NavBar .menu-desktop {
+    width: 60%;
+    justify-content: center;
+}
+
+.NavBar .logo,
+.NavBar .menu-desktop {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.NavBar .logo {
+    font-size: 2.25em;
+    color: #C1C1C1;
+}
+
+.NavBar .menu-desktop .divider {
+    height: 40%;
+    width: 1px;
+    border: none;
+    outline: none;
+    background: #C1C1C1;
+}
+
+.NavBar .menu-desktop div {
+    height: 60px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.NavBar .menu-desktop div a,
+.NavBar .menu-desktop div .link{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #C1C1C1;
+    transition: all 0.3s ease;
+}
+
+.NavBar .menu-desktop div a:hover,
+.NavBar .menu-desktop div .link:hover{
+    transform: scale(1.1);
+}
+.NavBar .menu-desktop .logout a {
+    font-weight: bold;
+}
+
+/* Student Navs */
+
+.NavBar .menu-desktop .student-nav.studentNotHovered{
+    height: 60px;
+}
+
+/*.NavBar .menu-desktop .student-nav.studentHovered{*/
+/*    height: 180px;*/
+/*}*/
+
+.NavBar .menu-desktop .student-nav.studentHovered{
+    height: 60px;
+}
+
+/*.NavBar .menu-desktop .student-nav.studentHovered a,*/
+/*.NavBar .menu-desktop .student-nav.studentHovered .link{*/
+/*    position: relative;*/
+/*    top: 60px;*/
+/*}*/
+
+.NavBar .menu-desktop .student-nav.studentHovered a,
+.NavBar .menu-desktop .student-nav.studentHovered .link{
+    position: relative;
+    top: 20px;
+}
+
+.NavBar .menu-desktop .student-nav.studentHovered .link{
+    cursor: default;
+}
+
+.NavBar .menu-desktop .student-nav.studentNotHovered .sub-student-nav {
+    display: none;
+}
+
+/*.NavBar .menu-desktop .student-nav.studentHovered .sub-student-nav {*/
+/*    display: flex;*/
+/*    background: #2F2F2F;*/
+/*    height: 120px;*/
+/*    position: relative;*/
+/*    top: 60px;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+.NavBar .menu-desktop .student-nav.studentHovered .sub-student-nav {
+    display: flex;
+    background: #2F2F2F;
+    height: 120px;
+    position: relative;
+    top: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.NavBar .menu-desktop .student-nav.studentHovered .sub-student-nav ul {
+    height: 100%;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: transparent;
+}
+
+.NavBar .menu-desktop .student-nav.studentHovered .sub-student-nav ul li{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    border-top: 1px solid #C1C1C1;
+    color: #C1C1C1;
+    transition: all 0.2s ease-in;
+}
+
+.NavBar .menu-desktop .student-nav.studentHovered .sub-student-nav ul li a{
+    height: 100%;
+    width: 100%;
+    position: unset;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: flex-start;
+}
+
+.NavBar .menu-desktop .student-nav.studentHovered .sub-student-nav ul li .student-add{
+    height: 100%;
+    width: 100%;
+    position: unset;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 1.1em;
+    padding-left: 2px;
+    cursor: default;
+}
+
+.NavBar .menu-desktop .student-nav.studentHovered .sub-student-nav ul li a:hover,
+.NavBar .menu-desktop .student-nav.studentHovered .sub-student-nav ul li .student-add:hover{
+    transform: scale(1.1);
+}
+
+.NavBar .menu-desktop .student-nav.studentHovered .sub-student-nav ul li .student-add-nav.studentAddNotHovered{
+    display: none;
+}
+
+/*.NavBar .menu-desktop .student-nav.studentHovered .sub-student-nav ul li .student-add-nav.studentAddHovered{*/
+/*    height: 120px;*/
+/*    width: 100px;*/
+/*    position: relative;*/
+/*    top: 45px;*/
+/*    left: 42px;*/
+/*    background: #2F2F2F;*/
+/*}*/
+.NavBar .menu-desktop .student-nav.studentHovered .sub-student-nav ul li .student-add-nav.studentAddHovered{
+    height: 40px;
+    width: 110px;
+    position: relative;
+    top: 5px;
+    left: 42px;
+    background: #2F2F2F;
+}
+
+.NavBar .menu-desktop .student-nav.studentHovered .sub-student-nav ul li .student-add-nav.studentAddHovered ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid #C1C1C1;
+}
+
+/* Marks Navs */
+
+.NavBar .menu-desktop .marks-nav.marksNotHovered{
+    height: 60px;
+}
+
+/*.NavBar .menu-desktop .marks-nav.marksHovered{*/
+/*    height: 220px;*/
+/*}*/
+.NavBar .menu-desktop .marks-nav.marksHovered{
+    height: 60px;
+}
+
+/*.NavBar .menu-desktop .marks-nav.marksHovered a,*/
+/*.NavBar .menu-desktop .marks-nav.marksHovered .link{*/
+/*    position: relative;*/
+/*    top: 80px;*/
+/*}*/
+.NavBar .menu-desktop .marks-nav.marksHovered a,
+.NavBar .menu-desktop .marks-nav.marksHovered .link{
+    position: relative;
+    top: 40px;
+}
+
+.NavBar .menu-desktop .marks-nav.marksHovered .link{
+    cursor: default;
+}
+
+.NavBar .menu-desktop .marks-nav.marksNotHovered .sub-marks-nav {
+    display: none;
+}
+
+/*.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav {*/
+/*    display: flex;*/
+/*    background: #2F2F2F;*/
+/*    height: 160px;*/
+/*    position: relative;*/
+/*    top: 80px;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav {
+    display: flex;
+    background: #2F2F2F;
+    height: 160px;
+    position: relative;
+    top: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul {
+    height: 100%;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: transparent;
+}
+
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    border-top: 1px solid #C1C1C1;
+    color: #C1C1C1;
+    transition: all 0.2s ease-in;
+}
+
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li a{
+    height: 100%;
+    width: 100%;
+    position: unset;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: flex-start;
+}
+
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li .marks-add,
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li .marks-view{
+    height: 100%;
+    width: 100%;
+    position: unset;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 1.1em;
+    padding-left: 2px;
+    cursor: default;
+}
+
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li a:hover,
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li .marks-add:hover,
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li .marks-view:hover{
+    transform: scale(1.1);
+}
+
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li .marks-add-nav.marksAddNotHovered,
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li .marks-view-nav.marksViewNotHovered{
+    display: none;
+}
+
+/*.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li .marks-add-nav.marksAddHovered{*/
+/*    height: 120px;*/
+/*    width: 100px;*/
+/*    position: relative;*/
+/*    top: 45px;*/
+/*    left: 42px;*/
+/*    background: #2F2F2F;*/
+/*}*/
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li .marks-add-nav.marksAddHovered{
+    height: 40px;
+    width: 110px;
+    position: relative;
+    top: 5px;
+    left: 42px;
+    background: #2F2F2F;
+}
+/*.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li .marks-view-nav.marksViewHovered{*/
+/*    height: 160px;*/
+/*    width: 100px;*/
+/*    position: relative;*/
+/*    top: 65px;*/
+/*    left: 35px;*/
+/*    background: #2F2F2F;*/
+/*}*/
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li .marks-view-nav.marksViewHovered{
+    height: 120px;
+    width: 110px;
+    position: relative;
+    top: 45px;
+    left: 35px;
+    background: #2F2F2F;
+}
+
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li .marks-add-nav.marksAddHovered ul li,
+.NavBar .menu-desktop .marks-nav.marksHovered .sub-marks-nav ul li .marks-view-nav.marksViewHovered ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid #C1C1C1;
+}

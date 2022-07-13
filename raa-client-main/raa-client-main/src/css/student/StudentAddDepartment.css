@@ -1,0 +1,158 @@
+.StudentAddDepartment {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 85%;
+    grid-template-areas: "title" "form-container";
+    overflow: hidden;
+}
+
+.StudentAddDepartment .title {
+    grid-area: title;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2em;
+}
+
+.StudentAddDepartment .input-container .loader {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.StudentAddDepartment .input-container .loader.loading {
+    display: flex;
+}
+
+.StudentAddDepartment .input-container .form-container {
+    grid-area: form-container;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.StudentAddDepartment .input-container .loader .loader-animation {
+    height: 150px;
+    width: 150px;
+}
+.StudentAddDepartment .input-container .loader .loader-animation img{
+    height: 100%;
+    width: 100%;
+}
+.StudentAddDepartment .input-container .loader .loader-text {
+    font-size: 2em;
+}
+
+.StudentAddDepartment .input-container .form-container.loading {
+    top: -100%;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.StudentAddDepartment .input-container .form-container .batch,
+.StudentAddDepartment .input-container .form-container .dept,
+.StudentAddDepartment .input-container .form-container .type,
+.StudentAddDepartment .input-container .form-container .file-upload,
+.StudentAddDepartment .input-container .form-container .button-container {
+    height: 75px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.StudentAddDepartment .input-container .form-container .batch input {
+    height: 50px;
+    width: 400px;
+    text-align: center;
+    border: 2px solid #1B1E21;
+    color: #1B1E21;
+    outline: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.StudentAddDepartment .input-container .form-container .dept select,
+.StudentAddDepartment .input-container .form-container .type select {
+    height: 50px;
+    width: 400px;
+    text-align: center;
+    border: 2px solid #1B1E21;
+    color: #1B1E21;
+    outline: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.StudentAddDepartment .input-container .form-container .file-upload .file-upload-container {
+    height: 50px;
+    width: 400px;
+    border: 2px solid #1B1E21;
+    outline: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    display: flex;
+
+}
+
+.StudentAddDepartment .input-container .form-container .file-upload .file-upload-container label {
+    display: block;
+    height: 100%;
+    width: 150px;
+    text-align: center;
+    color: #C1C1C1;
+    background: #1B1E21;
+    outline: none;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.StudentAddDepartment .input-container .form-container .file-upload .file-upload-container span {
+    height: 100%;
+    width: 250px;
+    text-align: center;
+    color: #1B1E21;
+    outline: none;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    cursor: default;
+}
+
+.StudentAddDepartment .input-container .form-container .button-container button {
+    height: 50px;
+    width: 200px;
+    background: #1B1E21;
+    color: #C1C1C1;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.StudentAddDepartment .input-container .form-container .button-container button:hover {
+    transform: scale(0.95);
+}

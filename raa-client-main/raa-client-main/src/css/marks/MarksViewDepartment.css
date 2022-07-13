@@ -1,0 +1,291 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.MarksViewDepartment {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 200px 1fr;
+    grid-template-areas: "title" "header" "result";
+
+}
+
+.MarksViewDepartment .title {
+    grid-area: title;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2em;
+}
+
+.MarksViewDepartment .header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.MarksViewDepartment .header .input-section {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "batch department" "semester search";
+}
+
+.MarksViewDepartment .header .input-section .Batch {
+    grid-area: batch;
+}
+
+.MarksViewDepartment .header .input-section .Department {
+    grid-area: department;
+}
+
+
+.MarksViewDepartment .header .input-section .Semester {
+    grid-area: semester;
+}
+
+.MarksViewDepartment .header .input-section .Search {
+    grid-area: search;
+}
+
+.MarksViewDepartment .header .input-section .Batch,
+.MarksViewDepartment .header .input-section .Department,
+.MarksViewDepartment .header .input-section .Semester,
+.MarksViewDepartment .header .input-section .Search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MarksViewDepartment .header .input-section input,
+.MarksViewDepartment .header .input-section select {
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    border: 2px solid #1B1E21;
+    color: #1B1E21;
+    outline: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.MarksViewDepartment .header .input-section input::placeholder {
+    color: #1B1E21;
+}
+
+.MarksViewDepartment .result {
+    grid-area: result;
+}
+
+.MarksViewDepartment .header .input-section button {
+    height: 50px;
+    width: 200px;
+    font-size: 1.2em;
+    background: #1B1E21;
+    color: #C1C1C1;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.MarksViewDepartment .header .input-section button:active {
+    transform: scale(0.9);
+}
+
+.MarksViewDepartment .result {
+    display: grid;
+    grid-template-rows: 120px 1fr 1fr  1fr 1fr;
+    grid-template-columns: 1fr;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.MarksViewDepartment .result .class-details {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 40px 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 1px solid rgba(27, 30, 33, 0.5);
+    border-bottom: 1px solid rgba(27, 30, 33, 0.5);
+    grid-template-areas: "class-batch class-department class-semester" "class-pass-percent class-fail-percent print-data";
+}
+
+.MarksViewDepartment .result .class-details .class-batch {
+    grid-area: class-batch;
+}
+
+.MarksViewDepartment .result .class-details .class-department {
+    grid-area: class-department;
+}
+
+.MarksViewDepartment .result .class-details .class-semester {
+    grid-area: class-semester;
+}
+
+.MarksViewDepartment .result .class-details .class-pass-percent {
+    grid-area: class-pass-percent;
+}
+
+.MarksViewDepartment .result .class-details .class-fail-percent {
+    grid-area: class-fail-percent;
+}
+
+.MarksViewDepartment .result .class-details .print-data {
+    grid-area: print-data;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.MarksViewDepartment .result .class-details .print-data button{
+    height: 30px;
+    width: 120px;
+    background: #1B1E21;
+    border-radius: 5px;
+    color: #C1C1C1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.MarksViewDepartment .result .class-details .print-data button:active {
+    transform: scale(0.9);
+}
+
+.MarksViewDepartment .result .class-details .class-batch,
+.MarksViewDepartment .result .class-details .class-department,
+.MarksViewDepartment .result .class-details .class-semester,
+.MarksViewDepartment .result .class-details .class-pass-percent,
+.MarksViewDepartment .result .class-details .class-fail-percent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.MarksViewDepartment .result .result-data {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 300px;
+}
+
+.MarksViewDepartment .result .arrear-1,
+.MarksViewDepartment .result .arrear-2,
+.MarksViewDepartment .result .arrear-3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 1fr 300px;
+    grid-template-areas: "title" "table-data" "graph-data";
+    border-top: 1px solid #1B1E21;
+}
+
+.MarksViewDepartment .result .arrear-1 .title,
+.MarksViewDepartment .result .arrear-2 .title,
+.MarksViewDepartment .result .arrear-3 .title {
+    grid-area: title;
+}
+
+.MarksViewDepartment .result .arrear-1 .table-data,
+.MarksViewDepartment .result .arrear-2 .table-data,
+.MarksViewDepartment .result .arrear-3 .table-data {
+    grid-area: table-data;
+}
+
+.MarksViewDepartment .result .arrear-1 .graph,
+.MarksViewDepartment .result .arrear-2 .graph,
+.MarksViewDepartment .result .arrear-3 .graph {
+    grid-area: graph-data;
+}
+
+.MarksViewDepartment .result .result-data .table-data,
+.MarksViewDepartment .result .arrear-1 .table-data,
+.MarksViewDepartment .result .arrear-2 .table-data,
+.MarksViewDepartment .result .arrear-3 .table-data {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.MarksViewDepartment .result .result-data .table-data .table,
+.MarksViewDepartment .result .arrear-1 .table-data .table,
+.MarksViewDepartment .result .arrear-2 .table-data .table,
+.MarksViewDepartment .result .arrear-3 .table-data .table {
+    width: 100%;
+}
+
+.MarksViewDepartment .result .result-data .table-data .table tr,
+.MarksViewDepartment .result .arrear-1 .table-data .table tr,
+.MarksViewDepartment .result .arrear-2 .table-data .table tr,
+.MarksViewDepartment .result .arrear-3 .table-data .table tr {
+    height: 25px;
+}
+
+.MarksViewDepartment .result .result-data .table-data .table tr:nth-child(odd),
+.MarksViewDepartment .result .arrear-1 .table-data .table tr:nth-child(odd),
+.MarksViewDepartment .result .arrear-2 .table-data .table tr:nth-child(odd),
+.MarksViewDepartment .result .arrear-3 .table-data .table tr:nth-child(odd) {
+    background-color: #F2F2F2;
+}
+
+.MarksViewDepartment .result .result-data .table-data .table tr:hover,
+.MarksViewDepartment .result .arrear-1 .table-data .table tr:hover,
+.MarksViewDepartment .result .arrear-2 .table-data .table tr:hover,
+.MarksViewDepartment .result .arrear-3 .table-data .table tr:hover {
+    background-color: #DDD;
+}
+
+.MarksViewDepartment .result .result-data .table-data .table tr td.fail,
+.MarksViewDepartment .result .arrear-1 .table-data .table tr td.fail,
+.MarksViewDepartment .result .arrear-2 .table-data .table tr td.fail,
+.MarksViewDepartment .result .arrear-3 .table-data .table tr td.fail {
+    font-weight: 700;
+    color: red;
+}
+
+.MarksViewDepartment .result .result-data .table-data .table tr td a,
+.MarksViewDepartment .result .arrear-1 .table-data .table tr td a,
+.MarksViewDepartment .result .arrear-2 .table-data .table tr td a,
+.MarksViewDepartment .result .arrear-3 .table-data .table tr td a {
+    color: #1B1E21;
+    text-decoration: underline;
+}
+
+.MarksViewDepartment .result .result-data .graph-data,
+.MarksViewDepartment .result .arrear-1 .graph-data,
+.MarksViewDepartment .result .arrear-2 .graph-data,
+.MarksViewDepartment .result .arrear-3 .graph-data {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+}
+
+.MarksViewDepartment .result .result-data .graph-data .BarGraph,
+.MarksViewDepartment .result .arrear-1 .graph-data .BarGraph,
+.MarksViewDepartment .result .arrear-2 .graph-data .BarGraph,
+.MarksViewDepartment .result .arrear-3 .graph-data .BarGraph {
+    padding: 5px;
+}
+
+.MarksViewDepartment .result .result-data .graph-data .PieGraph,
+.MarksViewDepartment .result .arrear-1 .graph-data .PieGraph,
+.MarksViewDepartment .result .arrear-2 .graph-data .PieGraph,
+.MarksViewDepartment .result .arrear-3 .graph-data .PieGraph {
+    padding: 5px;
+}
